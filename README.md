@@ -36,7 +36,7 @@ While the core mechanics are inspired by the classic game, this repository featu
 
 ### 🌐 Play Instantly Online
 Simply visit the live website to start playing right away: 
-👉 **[Launch Duck Hunt Live](YOUR_LIVE_WEBSITE_LINK_HERE)**
+👉 **[Launch Duck Hunt Live](https://github.com/wizm0hit/DuckHunt/deployments/github-pages)**
 
 ---
 
