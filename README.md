@@ -26,8 +26,8 @@ While the core mechanics are inspired by the classic game, this repository featu
 ### Live Action
 Watch the game loop, random intervals of quacking, and custom boundary collisions in action:
 
-https://github.com/wizm0hit/DuckHunt/raw/main/assets/gameplay/videos/duckhunt_preview.mp4
-
+<video src="https://github.com/wizm0hit/DuckHunt/raw/main/assets/gameplay/videos/duckhunt_preview.mp4" controls="controls" style="max-width: 100%;">
+</video>
 ### In-Game Moments
 | Dynamic 2-Duck Spawn | Context-Aware Round Clear |
 |---|---|
