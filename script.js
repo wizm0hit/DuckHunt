@@ -73,28 +73,41 @@ function addDucks() {
         duckImage.draggable = false;
         duckImage.style.position = "absolute";
         
-        duckImage.onclick = function() {
-            duckImage.onclick = null; 
+        duckImage.onmousedown = function(event) {
+            let padding = 15; 
+            let rect = this.getBoundingClientRect();
             
-            let duckShotSound = new Audio("./assets/audio/duck-shot.mp3");
-            duckShotSound.play();
-            score++;
-            document.getElementById("score").innerHTML = String(score);
-            
-            duckImage.src = duckFall;
-            
-            ducks = ducks.filter(d => d.image !== this);
+            let clickX = event.clientX - rect.left;
+            let clickY = event.clientY - rect.top;
 
-            setTimeout(() => {
-                if (duckImage.parentNode) {
-                    document.body.removeChild(duckImage);
-                }
+            if (
+                clickX >= padding && 
+                clickX <= (duckWidth - padding) &&
+                clickY >= padding && 
+                clickY <= (duckHeight - padding)
+            ) {
+                this.onmousedown = null; 
                 
-                if (ducks.length === 0) {
-                    stopAmbientAudio();
-                    addDog();
-                }
-            }, 1000);
+                let duckShotSound = new Audio("./assets/audio/duck-shot.mp3");
+                duckShotSound.play();
+                score++;
+                document.getElementById("score").innerHTML = String(score);
+                
+                duckImage.src = duckFall;
+                
+                ducks = ducks.filter(d => d.image !== this);
+
+                setTimeout(() => {
+                    if (duckImage.parentNode) {
+                        document.body.removeChild(duckImage);
+                    }
+                    
+                    if (ducks.length === 0) {
+                        stopAmbientAudio();
+                        addDog();
+                    }
+                }, 1000);
+            }
         };
         document.body.appendChild(duckImage);
 
