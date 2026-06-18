@@ -28,6 +28,7 @@ Watch the game loop, random intervals of quacking, and custom boundary collision
 
 <video src="https://github.com/wizm0hit/DuckHunt/raw/main/assets/gameplay/videos/duckhunt_preview.mp4" controls="controls" style="max-width: 100%;">
 </video>
+
 ### In-Game Moments
 | Dynamic 2-Duck Spawn | Context-Aware Round Clear |
 |---|---|
